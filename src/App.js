@@ -1,9 +1,9 @@
-import Main from './Pages/Main';
+import AppProvider from 'hooks';
 
 function App() {
     return(
     <>
-    <Main/>
+    <AppProvider></AppProvider>
     </>
     )
 }

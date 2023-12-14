@@ -1,9 +1,11 @@
-
+import Main from './Pages/Main';
 
 function App() {
-  <>
-    <p>l</p>
+    return(
+    <>
+    <Main/>
     </>
+    )
 }
 
 export default App;

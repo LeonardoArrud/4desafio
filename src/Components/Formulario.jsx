@@ -13,7 +13,48 @@ function Formulario(){
 
 
     useLayoutEffect(() => {
+        const isWideScreen = window.innerWidth > 999;
 
+        if (isWideScreen) {
+        gsap.registerPlugin(ScrollTrigger);
+       const ctx = gsap.context(() => {
+        tl.current = gsap.timeline({
+            scrollTrigger:{
+                trigger: ".container",
+                scrub: true,
+                
+                start: "top 920px",
+                end: "bottom 880px"
+            }
+        })
+        .fromTo(".title", {
+            opacity: 0,
+            y: -100,
+        }, {
+            opacity:1,
+            y: 0
+        })
+        .fromTo(".direito1", {
+            opacity: 0,
+            x: -300,
+        }, {
+            opacity:1,
+            x: 0
+        })
+        .fromTo(".esquerdo1", {
+            opacity: 0,
+            x: +200,
+        }, {
+            opacity:1,
+            x: 0
+        })
+       })
+
+        return () =>{
+            gsap.killTweensOf(".sedes")
+        };
+    } 
+    else{
         gsap.registerPlugin(ScrollTrigger);
        const ctx = gsap.context(() => {
         tl.current = gsap.timeline({
@@ -51,6 +92,7 @@ function Formulario(){
         return () =>{
             gsap.killTweensOf(".sedes")
         }
+    }
 
     }, [])
 

@@ -16,8 +16,59 @@ function Servicos(){
 
 
 
-    useLayoutEffect(() => {
+    useLayoutEffect(() => {const isWideScreen = window.innerWidth > 999;
 
+        if (isWideScreen) {
+        gsap.registerPlugin(ScrollTrigger);
+       const ctx = gsap.context(() => {
+        tl.current = gsap.timeline({
+            scrollTrigger:{
+                trigger: ".serv",
+                scrub: true,
+                start: "top 800px",
+                end: "bottom 880px"
+            }
+        })
+        .fromTo("#titulo2", {
+            opacity: 0,
+            y: -100,
+        }, {
+            opacity:1,
+            y: 0
+        })
+        .fromTo("#ana", {
+            opacity: 0,
+            y: +300,
+        }, {
+            opacity:1,
+            y: 0
+        })
+        .fromTo("#col", {
+            opacity: 0,
+            y: +200,
+        }, {
+            opacity:1,
+            y: 0
+        }) .fromTo("#colr", {
+            opacity: 0,
+            y: +100,
+        }, {
+            opacity:1,
+            y: 0
+        })
+        .fromTo("#inv", {
+            opacity: 0,
+            y: +50,
+        }, {
+            opacity:1,
+            y: 0
+        })
+       })
+
+        return () =>{
+            gsap.killTweensOf(".serv")
+        };
+    } else{
         gsap.registerPlugin(ScrollTrigger);
        const ctx = gsap.context(() => {
         tl.current = gsap.timeline({
@@ -67,6 +118,7 @@ function Servicos(){
         return () =>{
             gsap.killTweensOf(".serv")
         }
+    }
 
     }, [])
     const renderIcon = (dadosId) => {

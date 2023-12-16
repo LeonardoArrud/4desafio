@@ -12,7 +12,7 @@ function Contato(){
         <>
         <section className="cabeca">
             <div className='texto-cont'>
-            <h1>Quer resultados jamais vistos?</h1>
+            <h1 id='tit'>Quer resultados jamais vistos?</h1>
             <h2>Ficaremos feliz em ajudar!</h2>
             <button className='btn' onClick={scrollToSection}>Entrar em contato</button>
             </div>

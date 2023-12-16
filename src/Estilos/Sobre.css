@@ -33,3 +33,11 @@
 .resto{
     background-image: linear-gradient(10deg, #0000ff, #0087f5);
 }
+@media (max-width: 999px){
+    .texto-cont h1{
+        font-size: 3em;
+    }
+    .btn{
+        margin-top: 30px;
+    }
+}

@@ -1,6 +1,6 @@
 
 .container{
-    height: 80vh;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,7 @@
     font-size: 4.5em;
     font-family: poppinsB;
   }
-  .redes{
+  .redes3{
     display: flex;
     flex-direction: row;
   }
@@ -72,4 +72,18 @@
     height: 200px;
     padding: 20px;
     margin: 10px;
+}
+@media (max-width: 999px){
+  .redes3{
+    flex-direction: column;
+  }
+  .title{
+    font-size: 2em;
+  }
+  .wpp{
+    width: 300px ;
+  }
+  .direito1{
+    flex-direction: column;
+  }
 }

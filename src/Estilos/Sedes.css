@@ -19,6 +19,12 @@
     width: 100%;
     height: 60%;
     background-color: brown;
+    display: flex;
+    justify-content: center;
+}
+.sede img{
+    max-width: 100%;
+  background-position: center;
 }
 .textos h1{
 font-size: 1.5em;
@@ -28,4 +34,16 @@ padding: 10px;
 }
 .textos{
     max-width: 100%;
+}
+@media (max-width: 999px){
+    .sedes{
+        overflow-x: hidden;
+
+    }
+    .enderes{
+        flex-direction: column;
+    }
+    #titu{
+        font-size: 5em;
+    }
 }

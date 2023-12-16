@@ -56,3 +56,22 @@ html {
     }
 
 }
+@media (max-width: 999px){
+    .cabeca{
+        overflow-x: hidden;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .formulario{
+        overflow-x: hidden;
+    }
+    .texto-cont h2{
+        font-size: 1.5em;
+    }
+    #tit{
+        font-size: 2em;
+        justify-self: center;
+        margin-left: 20px;
+    }
+}

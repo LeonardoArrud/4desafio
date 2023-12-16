@@ -1,12 +1,10 @@
-footer{
-    background-color:white;
-    text-align: center;
-}
+
 .roda{
     display: flex;
     justify-content: center;
     flex-direction: row;
     padding: 20px;
+    background-color: black;
 }
 .infos{
     display: flex;
@@ -46,4 +44,26 @@ footer{
     box-shadow: 0px 0px 8px rgba(255, 255, 255, 0);
     transform: scale(1.05);
     cursor: pointer;
+}
+@media (max-width: 768px){
+    .roda{
+        overflow-x: hidden;
+    }
+    .roda{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .text h1{
+        font-size: 1.5em;
+    }
+    .text p{
+        font-size: 15px;
+    }
+    .infos h2{
+        font-size: 1.2em;
+    }
+    .redes svg{
+        margin-left: 20px;
+    }
 }

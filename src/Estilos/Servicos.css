@@ -46,4 +46,22 @@
     font-family: poppinsR;
     font-size: 1em;
 }
-
+@media (max-width: 999px){
+    .serv{
+        overflow-x: hidden;
+        justify-content: center;
+    }
+    .servicos{
+        flex-direction: column;
+    }
+    #titulo2{
+        font-size: 2em;
+    }
+    .servico{
+        width: 350px;
+        height: 400px;
+    }
+    .servico:hover{
+        animation: none;
+    }
+}

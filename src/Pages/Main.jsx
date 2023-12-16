@@ -7,7 +7,7 @@ import Depoimentos from "../Components/Depoimentos";
 
 function Main(){
     return(
-        <>
+        <section className='tudo'>
         <section className="cabeca">
    
         <SliderSection />
@@ -21,9 +21,9 @@ function Main(){
         <section className="depoimentos">
             <h1>Depoimentos</h1>
             <Depoimentos/>
+           
         </section>
-     
-        </>
+        </section>
     )
 
 }

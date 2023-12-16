@@ -33,7 +33,6 @@
     overflow: hidden; 
     display: flex;
      justify-content: center;
-     background-color: black;
      padding: 20px;
 
 }
@@ -54,4 +53,12 @@
 }
 .depoimentos1{
     background: rgb(18, 184, 87);
+}
+@media (max-width: 999px){
+    .clientes{
+        flex-direction: column;
+    }
+    .cliente{
+        width: 300px;
+    }
 }

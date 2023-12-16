@@ -21,8 +21,8 @@ function Formulario(){
                 trigger: ".container",
                 scrub: true,
                 
-                start: "top 800px",
-                end: "bottom 920px"
+                start: "top 680px",
+                end: "bottom 700px"
             }
         })
         .fromTo(".title", {
@@ -57,7 +57,7 @@ function Formulario(){
   return (
     <div className="container">
       <h1 className="title">Canais de atendimento</h1>
-      <div className='redes'>
+      <div className='redes3'>
       <div className='wpp direito1'>
         <div className='texts'>
             <FaWhatsapp/>

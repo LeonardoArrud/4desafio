@@ -12,7 +12,9 @@ function Detalhes(){
 
 
     useLayoutEffect(() => {
+        const isWideScreen = window.innerWidth > 999;
 
+        if (isWideScreen) {
         gsap.registerPlugin(ScrollTrigger);
        const ctx = gsap.context(() => {
         tl.current = gsap.timeline({
@@ -54,9 +56,49 @@ function Detalhes(){
 
         return () =>{
             gsap.killTweensOf(".sobren")
-        }
+        };
+    }
+    else{
+        gsap.registerPlugin(ScrollTrigger);
+       const ctx = gsap.context(() => {
+        tl.current = gsap.timeline({
+            scrollTrigger:{
+                trigger: ".deta",
+                scrub: true,
+                
+                start: "top 600px",
+                end: "bottom 760px"
+            }
+        })
+        .fromTo(".hist", {
+            opacity: 0,
+            x: -300,
+        }, {
+            opacity:1,
+            x: 0
+        })
+        .fromTo("#cafe", {
+            opacity: 0,
+            x: +200,
+        }, {
+            opacity:1,
+            x: 0
+        }) .fromTo("#reuni", {
+            opacity: 0,
+            x: -300,
+        }, {
+            opacity:1,
+            x: 0
+        })
+       })
+
+        return () =>{
+            gsap.killTweensOf(".sobren")
+        };
+    }
 
     }, [])
+    
     
     return (
         <section className="sobren">
@@ -76,10 +118,10 @@ function Detalhes(){
                     </section>
                     ) :(
                         <div className="boas" key={i} id={dados.id}>
-                        <div className="pe">
+                        <div className="pe" id={dados.id}>
                         <img src = {dados.imagem}/>
                         </div>
-                        <div className="textos">
+                        <div className="textos" >
                         <h1>{dados.titulo}</h1>
                         <p>{dados.texto}</p>
                         </div>

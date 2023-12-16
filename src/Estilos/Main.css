@@ -55,3 +55,26 @@
     margin-top: 50px;
 
 }
+@media (max-width: 999px){
+    .tudo{
+        overflow-x: hidden;
+    }
+    .cabeca{
+        overflow-x: hidden;
+    }
+    .motivos{
+        overflow-x: hidden;
+    }
+    .depoimentos{
+        overflow-x: hidden;
+    }
+    .numeros h1{
+        font-size: 3em;
+    }
+    .numeros{
+        height: 100%;
+    }
+    .depoimentos h1{
+        font-size: 3em;
+    }
+}
